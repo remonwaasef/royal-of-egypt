@@ -228,7 +228,7 @@ return [
 	"Import Sale" => "بيع استيراد",
 	"Sale Status" => "حالة البيع",
 	"Payment Status" => "حالة السداد",
-	"Generate Invoice" => "انشاءة الفاتورة",
+	"Generate Invoice" => "انشاء الفاتورة",
 	"Add Payment" => "إضافة الدفع",
 	"View Payment" => "عرض الدفع",
 	"Add Delivery" => "أضف التسليم",
