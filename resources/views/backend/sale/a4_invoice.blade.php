@@ -39,7 +39,7 @@
             </table>
             <br>
         </div>
-        <table style="width: 100%;border-collapse: collapse;">
+        <table dir ="rtl" style="width: 100%;border-collapse: collapse;">
             <tr>
                 <td colspan="2" style="padding:9px 0;width:40%">
                     <h1 style="margin:0">{{$lims_biller_data->company_name}}</h1>
@@ -83,10 +83,10 @@
                 </td>
             </tr>
         </table>
-        <table style="width: 100%;border-collapse: collapse; margin-top: 4px;">
+        <table dir ="rtl" style="width: 100%;border-collapse: collapse; margin-top: 4px;">
             <tr>
                 <td colspan="3" style="padding:4px 0;width:30%;vertical-align:top">
-                    <h2 style="background-color: rgb(1, 75, 148); color: white; padding:3px 10px; margin-bottom:0">Bill To</h2>
+                    <h2 style="background-color: rgb(1, 75, 148); color: white; padding:3px 10px; margin-bottom:0">بيانات العميل</h2>
                     <div style="margin-top: 10px;margin-left: 10px">
                         <span>{{$lims_customer_data->name}}</span>
                     </div>
@@ -94,10 +94,10 @@
                         <span>VAT Number:</span>&nbsp;&nbsp;<span>{{$lims_customer_data->tax_no}}</span>
                     </div>
                     <div style="margin-left: 10px">
-                        <span>Address:</span>&nbsp;&nbsp;<span>{{$lims_customer_data->address}}</span>
+                        <span>العنوان:</span>&nbsp;&nbsp;<span>{{$lims_customer_data->address}}</span>
                     </div>
                     <div style="margin-bottom: 10px;margin-left: 10px">
-                        <span>Phone:</span>&nbsp;&nbsp;<span>{{$lims_customer_data->phone_number}}</span>
+                        <span>رقم الهاتف:</span>&nbsp;&nbsp;<span>{{$lims_customer_data->phone_number}}</span>
                     </div>
                 </td>
                 <td colspan="4" style="width:60%">

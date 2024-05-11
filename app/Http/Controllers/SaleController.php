@@ -137,6 +137,7 @@ class SaleController extends Controller
 
     public function saleData(Request $request)
     {
+        
         $columns = array(
             1 => 'created_at',
             2 => 'reference_no',
@@ -1250,20 +1251,28 @@ class SaleController extends Controller
                 return Table::where('is_active',true)->get();
             });
             //return $lims_category_list;
+
+
+/////////////////update for ROE///////////////// edit  view recent 50 transactions
+
             if(Auth::user()->role_id > 2 && config('staff_access') == 'own') {
                 $recent_sale = Sale::select('id','reference_no','customer_id','grand_total','created_at')->where([
                     ['sale_status', 1],
                     ['user_id', Auth::id()]
-                ])->orderBy('id', 'desc')->take(10)->get();
+                ])->orderBy('id', 'desc')->take(50)->get();
                 $recent_draft = Sale::select('id','reference_no','customer_id','grand_total','created_at')->where([
                     ['sale_status', 3],
                     ['user_id', Auth::id()]
-                ])->orderBy('id', 'desc')->take(10)->get();
+                ])->orderBy('id', 'desc')->take(50)->get();
             }
             else {
-                $recent_sale = Sale::select('id','reference_no','customer_id','grand_total','created_at')->where('sale_status', 1)->orderBy('id', 'desc')->take(10)->get();
-                $recent_draft = Sale::select('id','reference_no','customer_id','grand_total','created_at')->where('sale_status', 3)->orderBy('id', 'desc')->take(10)->get();
+                $recent_sale = Sale::select('id','reference_no','customer_id','grand_total','created_at')->where('sale_status', 1)->orderBy('id', 'desc')->take(50)->get();
+                $recent_draft = Sale::select('id','reference_no','customer_id','grand_total','created_at')->where('sale_status', 3)->orderBy('id', 'desc')->take(150)->get();
             }
+/////////////////update by ROE///////////////// edit  view recent 50 transactions
+
+
+
             $lims_coupon_list = Cache::remember('coupon_list', 60*60*24*30, function () {
                 return Coupon::where('is_active',true)->get();
             });
