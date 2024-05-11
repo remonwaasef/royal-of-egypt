@@ -1,0 +1,5 @@
+-----------V1 By ROE
+1-change adjustment operation + after -
+2-change the musted input in customer and suppliers
+3-change the direction invoec 
+4- View 50 previous sell orders or 50 drafts  
