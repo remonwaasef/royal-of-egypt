@@ -42,7 +42,6 @@
                                 </div>
                                 <div class="row mt-5">
                                     <div class="col-md-12">
-                                        <h5>{{trans('file.Order Table')}} *</h5>
                                         <div class="table-responsive mt-3">
                                             <table id="myTable" class="table table-hover order-list">
                                                 <thead>
@@ -215,7 +214,7 @@
                     cols += '<td>' + data[1] + '</td>';
                     cols += '<td>' + data[4] + '<input type="hidden" name="unit_cost[]" value="'+data[4]+'" /></td>';
                     cols += '<td><input type="number" class="form-control qty" name="qty[]" value="1" required step="any" /></td>';
-                    cols += '<td class="action"><select name="action[]" class="form-control act-val"><option value="-">{{trans("file.Subtraction")}}</option><option value="+">{{trans("file.Addition")}}</option></select></td>';
+                    cols += '<td class="action"><select name="action[]" class="form-control act-val"><option value="+">{{trans("file.Addition")}}</option><option value="-">{{trans("file.Subtraction")}}</option></select></td>';
                     cols += '<td><button type="button" class="ibtnDel btn btn-md btn-danger">{{trans("file.delete")}}</button></td>';
                     cols += '<input type="hidden" class="product-code" name="product_code[]" value="' + data[1] + '"/>';
                     cols += '<input type="hidden" class="product-id" name="product_id[]" value="' + data[2] + '"/>';
